@@ -13,9 +13,11 @@
 		0955348920599E87004D24D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0955348820599E87004D24D3 /* Assets.xcassets */; };
 		0955348C20599E87004D24D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348A20599E87004D24D3 /* LaunchScreen.storyboard */; };
 		0955349720599E87004D24D3 /* LPNotesManagerCodeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */; };
-		095534A72059A3C6004D24D3 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095534A62059A3C6004D24D3 /* Assembler.swift */; };
+		095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */; };
 		09CE1C66205AFB2B0090656A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; };
 		09CE1C67205AFB2B0090656A /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09CE1C6B205AFE360090656A /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */; };
+		09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6D205B00590090656A /* AssemblerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +55,10 @@
 		0955349220599E87004D24D3 /* LPNotesManagerCodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPNotesManagerCodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPNotesManagerCodeTestTests.swift; sourceTree = "<group>"; };
 		0955349820599E87004D24D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		095534A62059A3C6004D24D3 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembler.swift; sourceTree = "<group>"; };
 		09CE1C64205AFB230090656A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
+		09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		09CE1C6D205B00590090656A /* AssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		0955348020599E87004D24D3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				09CE1C6C205B001A0090656A /* Protocols */,
+				09CE1C69205AFE1A0090656A /* Extensions */,
 				0955348120599E87004D24D3 /* AppDelegate.swift */,
 				0955348520599E87004D24D3 /* Main.storyboard */,
 				0955348820599E87004D24D3 /* Assets.xcassets */,
@@ -128,10 +134,26 @@
 		09CE1C68205AFCD20090656A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				095534A62059A3C6004D24D3 /* Assembler.swift */,
+				095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */,
 				0955348320599E87004D24D3 /* ViewController.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		09CE1C69205AFE1A0090656A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09CE1C6C205B001A0090656A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				09CE1C6D205B00590090656A /* AssemblerProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0955348420599E87004D24D3 /* ViewController.swift in Sources */,
-				095534A72059A3C6004D24D3 /* Assembler.swift in Sources */,
+				095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */,
+				09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */,
+				09CE1C6B205AFE360090656A /* UIStoryboardExtension.swift in Sources */,
 				0955348220599E87004D24D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
