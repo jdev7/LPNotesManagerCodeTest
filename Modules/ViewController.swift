@@ -8,18 +8,23 @@
 
 import UIKit
 
+protocol NetworkManagerProtocol {
+    func fetchData()
+}
+
+class NetworkManager: NetworkManagerProtocol {
+    func fetchData() {
+        print("doSomething")
+    }
+}
+
 class ViewController: UIViewController {
+    
+    var manager: NetworkManagerProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        manager.fetchData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
