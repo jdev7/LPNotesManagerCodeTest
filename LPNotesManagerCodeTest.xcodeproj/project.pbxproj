@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091BBDFB205B08520046A2F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091BBDFA205B08520046A2F4 /* Default-568h@2x.png */; };
 		0955348220599E87004D24D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348120599E87004D24D3 /* AppDelegate.swift */; };
 		0955348420599E87004D24D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348320599E87004D24D3 /* ViewController.swift */; };
 		0955348720599E87004D24D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348520599E87004D24D3 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		091BBDFA205B08520046A2F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0955347E20599E87004D24D3 /* LPNotesManagerCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPNotesManagerCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955348120599E87004D24D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0955348320599E87004D24D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				0955348820599E87004D24D3 /* Assets.xcassets */,
 				0955348A20599E87004D24D3 /* LaunchScreen.storyboard */,
 				0955348D20599E87004D24D3 /* Info.plist */,
+				091BBDFA205B08520046A2F4 /* Default-568h@2x.png */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0955348C20599E87004D24D3 /* LaunchScreen.storyboard in Resources */,
+				091BBDFB205B08520046A2F4 /* Default-568h@2x.png in Resources */,
 				0955348920599E87004D24D3 /* Assets.xcassets in Resources */,
 				0955348720599E87004D24D3 /* Main.storyboard in Resources */,
 			);
@@ -424,7 +428,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = LPNotesManagerCodeTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.perhapps.LPNotesManagerCodeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +448,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = LPNotesManagerCodeTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.perhapps.LPNotesManagerCodeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
