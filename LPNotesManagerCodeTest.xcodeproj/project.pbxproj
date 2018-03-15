@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		091BBDFB205B08520046A2F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091BBDFA205B08520046A2F4 /* Default-568h@2x.png */; };
+		091BBE04205B08E50046A2F4 /* NotesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBDFE205B08E50046A2F4 /* NotesListInteractor.swift */; };
+		091BBE05205B08E50046A2F4 /* NotesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBDFF205B08E50046A2F4 /* NotesListPresenter.swift */; };
+		091BBE06205B08E50046A2F4 /* NotesListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE00205B08E50046A2F4 /* NotesListProtocols.swift */; };
+		091BBE07205B08E50046A2F4 /* NotesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE01205B08E50046A2F4 /* NotesListRouter.swift */; };
+		091BBE08205B08E50046A2F4 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE02205B08E50046A2F4 /* NotesListViewController.swift */; };
+		091BBE09205B08E50046A2F4 /* NotesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091BBE03205B08E50046A2F4 /* NotesListViewController.xib */; };
+		091BBE0B205B093E0046A2F4 /* NotesListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */; };
 		0955348220599E87004D24D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348120599E87004D24D3 /* AppDelegate.swift */; };
 		0955348420599E87004D24D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348320599E87004D24D3 /* ViewController.swift */; };
 		0955348720599E87004D24D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348520599E87004D24D3 /* Main.storyboard */; };
@@ -17,7 +24,6 @@
 		095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */; };
 		09CE1C66205AFB2B0090656A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; };
 		09CE1C67205AFB2B0090656A /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		09CE1C6B205AFE360090656A /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */; };
 		09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6D205B00590090656A /* AssemblerProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +53,13 @@
 
 /* Begin PBXFileReference section */
 		091BBDFA205B08520046A2F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		091BBDFE205B08E50046A2F4 /* NotesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListInteractor.swift; sourceTree = "<group>"; };
+		091BBDFF205B08E50046A2F4 /* NotesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListPresenter.swift; sourceTree = "<group>"; };
+		091BBE00205B08E50046A2F4 /* NotesListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListProtocols.swift; sourceTree = "<group>"; };
+		091BBE01205B08E50046A2F4 /* NotesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListRouter.swift; sourceTree = "<group>"; };
+		091BBE02205B08E50046A2F4 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
+		091BBE03205B08E50046A2F4 /* NotesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesListViewController.xib; sourceTree = "<group>"; };
+		091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListAssembler.swift; sourceTree = "<group>"; };
 		0955347E20599E87004D24D3 /* LPNotesManagerCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPNotesManagerCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955348120599E87004D24D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0955348320599E87004D24D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +72,6 @@
 		0955349820599E87004D24D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembler.swift; sourceTree = "<group>"; };
 		09CE1C64205AFB230090656A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
-		09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		09CE1C6D205B00590090656A /* AssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091BBDFC205B08CD0046A2F4 /* NotesList */ = {
+			isa = PBXGroup;
+			children = (
+				091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */,
+				091BBDFE205B08E50046A2F4 /* NotesListInteractor.swift */,
+				091BBDFF205B08E50046A2F4 /* NotesListPresenter.swift */,
+				091BBE00205B08E50046A2F4 /* NotesListProtocols.swift */,
+				091BBE01205B08E50046A2F4 /* NotesListRouter.swift */,
+				091BBE02205B08E50046A2F4 /* NotesListViewController.swift */,
+				091BBE03205B08E50046A2F4 /* NotesListViewController.xib */,
+			);
+			path = NotesList;
+			sourceTree = "<group>";
+		};
 		0955347520599E87004D24D3 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +163,7 @@
 		09CE1C68205AFCD20090656A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				091BBDFC205B08CD0046A2F4 /* NotesList */,
 				095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */,
 				0955348320599E87004D24D3 /* ViewController.swift */,
 			);
@@ -146,7 +173,6 @@
 		09CE1C69205AFE1A0090656A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,6 +273,7 @@
 				091BBDFB205B08520046A2F4 /* Default-568h@2x.png in Resources */,
 				0955348920599E87004D24D3 /* Assets.xcassets in Resources */,
 				0955348720599E87004D24D3 /* Main.storyboard in Resources */,
+				091BBE09205B08E50046A2F4 /* NotesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +293,13 @@
 			files = (
 				0955348420599E87004D24D3 /* ViewController.swift in Sources */,
 				095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */,
+				091BBE08205B08E50046A2F4 /* NotesListViewController.swift in Sources */,
+				091BBE07205B08E50046A2F4 /* NotesListRouter.swift in Sources */,
+				091BBE05205B08E50046A2F4 /* NotesListPresenter.swift in Sources */,
+				091BBE04205B08E50046A2F4 /* NotesListInteractor.swift in Sources */,
 				09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */,
-				09CE1C6B205AFE360090656A /* UIStoryboardExtension.swift in Sources */,
+				091BBE0B205B093E0046A2F4 /* NotesListAssembler.swift in Sources */,
+				091BBE06205B08E50046A2F4 /* NotesListProtocols.swift in Sources */,
 				0955348220599E87004D24D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

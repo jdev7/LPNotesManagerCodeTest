@@ -38,7 +38,7 @@ class BaseAssembler<T: UIViewController>: AssemblerProtocol {
     
     private func registerAllDependencies() {
         container.register(T.self, factory: { _ in
-            let controller: T = UIStoryboard.instantiateViewController()
+            let controller: T = T(nibName: String(describing: T.self), bundle: nil)
             self.resolveDependencies(viewController: controller)
             return controller
         })
