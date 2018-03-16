@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NotesListAssembler: BaseAssembler<NotesListViewController> {
+class NotesListAssembler: ViewControllerAssembler<NotesListViewController> {
     
     override func registerDependencies() {
         container.register(NotesListRouter.self, factory: { _ in NotesListRouter() })
@@ -18,7 +18,7 @@ class NotesListAssembler: BaseAssembler<NotesListViewController> {
         }
     }
     
-    override func resolveDependencies(viewController: NotesListViewController) {
+    override func resolveDependencies(object viewController: NotesListViewController) {
         let router = container.resolve(NotesListRouter.self)
         let interactor = container.resolve(NotesListInteractor.self)
         let presenter = container.resolve(NotesListPresenter.self, arguments: viewController, interactor!, router!)

@@ -15,6 +15,7 @@
 		091BBE08205B08E50046A2F4 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE02205B08E50046A2F4 /* NotesListViewController.swift */; };
 		091BBE09205B08E50046A2F4 /* NotesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091BBE03205B08E50046A2F4 /* NotesListViewController.xib */; };
 		091BBE0B205B093E0046A2F4 /* NotesListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */; };
+		091BBE0D205BB3D70046A2F4 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE0C205BB3D70046A2F4 /* MainAssembler.swift */; };
 		0955348220599E87004D24D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348120599E87004D24D3 /* AppDelegate.swift */; };
 		0955348420599E87004D24D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348320599E87004D24D3 /* ViewController.swift */; };
 		0955348720599E87004D24D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348520599E87004D24D3 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		091BBE02205B08E50046A2F4 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		091BBE03205B08E50046A2F4 /* NotesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesListViewController.xib; sourceTree = "<group>"; };
 		091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListAssembler.swift; sourceTree = "<group>"; };
+		091BBE0C205BB3D70046A2F4 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		0955347E20599E87004D24D3 /* LPNotesManagerCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPNotesManagerCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955348120599E87004D24D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0955348320599E87004D24D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				09CE1C6D205B00590090656A /* AssemblerProtocol.swift */,
+				091BBE0C205BB3D70046A2F4 /* MainAssembler.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				0955348420599E87004D24D3 /* ViewController.swift in Sources */,
 				095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */,
+				091BBE0D205BB3D70046A2F4 /* MainAssembler.swift in Sources */,
 				091BBE08205B08E50046A2F4 /* NotesListViewController.swift in Sources */,
 				091BBE07205B08E50046A2F4 /* NotesListRouter.swift in Sources */,
 				091BBE05205B08E50046A2F4 /* NotesListPresenter.swift in Sources */,

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewControllerAssembler: BaseAssembler<ViewController> {
+class MyViewControllerAssembler: ViewControllerAssembler<ViewController> {
     
     override func registerDependencies() {
         container.register(NetworkManagerProtocol.self) { _ in NetworkManager() }
     }
 
-    override func resolveDependencies(viewController: ViewController) {
+    override func resolveDependencies(object viewController: ViewController) {
         viewController.manager = container.resolve(NetworkManagerProtocol.self)
     }
 }

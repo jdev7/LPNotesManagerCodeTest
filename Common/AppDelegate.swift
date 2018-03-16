@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let vc: NotesListViewController = NotesListAssembler().resolve()
+        let assembler = MainAssembler()
+        let vc: NotesListViewController = assembler.resolve()
         window?.rootViewController = vc
         
         return true
