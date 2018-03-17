@@ -10,11 +10,17 @@ import UIKit
 class NotesListRouter: NotesListWireframeProtocol {
     weak var viewController: UIViewController?
     
+    private weak var assembler: MainAssembler!
+    
+    init(assembler: MainAssembler) {
+        self.assembler = assembler
+    }
+    
     func goToEditNote(id: String) {
-        print("Go to edit note")
+        print("Go to edit note \(assembler)")
     }
     
     func gotToAddNote() {
-        print("Go to add note")
+        print("Go to add note \(assembler)")
     }
 }

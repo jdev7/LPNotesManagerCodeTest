@@ -23,10 +23,13 @@ class ViewControllerAssembler<T: UIViewController>: AssemblerProtocol {
     typealias AssembledType = T
     
     let container: Container
+    weak var mainAssembler: MainAssembler!
     
-    required init() {
+    required init(mainAssembler: MainAssembler) {
         container = Container()
+        self.mainAssembler = mainAssembler
         register()
+        
     }
     
     final func resolve() -> T {

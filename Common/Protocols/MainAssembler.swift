@@ -19,7 +19,7 @@ class MainAssembler {
     }
     
     func registerDependencies() {
-        container.register(ViewControllerAssembler<NotesListViewController>.self, factory: { _ in NotesListAssembler() })
+        container.register(ViewControllerAssembler<NotesListViewController>.self, factory: { _ in NotesListAssembler(mainAssembler: self) })
     }
     
     func resolve<T: UIViewController>() -> T {

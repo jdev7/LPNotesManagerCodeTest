@@ -14,13 +14,14 @@ import Swinject
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var assembler: MainAssembler!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let assembler = MainAssembler()
+        assembler = MainAssembler()
         let vc: NotesListViewController = assembler.resolve()
         window?.rootViewController = vc
         

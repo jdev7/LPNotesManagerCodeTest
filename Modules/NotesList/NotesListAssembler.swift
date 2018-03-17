@@ -11,7 +11,7 @@ import Foundation
 class NotesListAssembler: ViewControllerAssembler<NotesListViewController> {
     
     override func registerDependencies() {
-        container.register(NotesListRouter.self, factory: { _ in NotesListRouter() })
+        container.register(NotesListRouter.self, factory: { _ in NotesListRouter(assembler: self.mainAssembler) })
         container.register(NotesDataManager.self, factory: { _ in NotesDataManager() }).inObjectScope(.container)
         container.register(NotesListInteractor.self, factory: { (_, dataManager: NotesDataManager) in NotesListInteractor(dataManager: dataManager) })
         container.register(NotesListPresenter.self) { (_, view: NotesListViewController, interactor: NotesListInteractor, router: NotesListRouter) in
