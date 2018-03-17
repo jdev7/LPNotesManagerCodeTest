@@ -44,6 +44,10 @@ class NotesListViewController: UIViewController {
         addNoteButton.setTitleColor(UIColor.lightGray, for: .selected)
         addNoteButton.layer.cornerRadius = 6.0
         addNoteButton.layer.masksToBounds = true
+        
+        navigationController?.navigationBar.barTintColor = .lpGreen
+        navigationController?.navigationBar.tintColor = .white
+        
         setupTableView()
     }
     

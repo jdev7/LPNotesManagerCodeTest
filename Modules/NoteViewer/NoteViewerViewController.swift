@@ -29,6 +29,7 @@ class NoteViewerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: view.window)
         
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         view.endEditing(true)
@@ -36,6 +37,20 @@ class NoteViewerViewController: UIViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    func setupView() {
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTouchSaveButton))
+        saveButton.tintColor = .white
+        navigationItem.setRightBarButton(saveButton, animated: true)
+        
+        
+        descriptionContainer.layer.borderColor = UIColor.lightGray.cgColor
+        descriptionContainer.layer.borderWidth = 0.5
+        descriptionContainer.layer.cornerRadius = 6.0
+        descriptionContainer.layer.masksToBounds = true
+        
+        descriptionTextView.delegate = self
     }
     
     @objc func keyboardWillShow(notification: Notification) {
@@ -53,18 +68,6 @@ class NoteViewerViewController: UIViewController {
         UIView.animate(withDuration: duration?.doubleValue ?? 0.3) {
             self.view.layoutIfNeeded()
         }
-    }
-    
-    func setupView() {
-        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTouchSaveButton))
-        navigationItem.setRightBarButton(saveButton, animated: true)
-        
-        descriptionContainer.layer.borderColor = UIColor.lightGray.cgColor
-        descriptionContainer.layer.borderWidth = 0.5
-        descriptionContainer.layer.cornerRadius = 6.0
-        descriptionContainer.layer.masksToBounds = true
-        
-        descriptionTextView.delegate = self
     }
     
     @objc func didTouchSaveButton() {
