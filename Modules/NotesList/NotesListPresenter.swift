@@ -19,6 +19,8 @@ class NotesListPresenter {
     var interactor: NotesListInteractorInputProtocol
     private weak var view: NotesListViewProtocol?
     private let router: NotesListWireframeProtocol
+    
+    private var notes: [Note] = []
 
     init(view: NotesListViewProtocol, interactor: NotesListInteractorInputProtocol, router: NotesListWireframeProtocol) {
         self.view = view
@@ -29,8 +31,12 @@ class NotesListPresenter {
 }
 
 extension NotesListPresenter: NotesListPresenterProtocol {
+    func didTouchAddNote() {
+        router.gotToAddNote()
+    }
+    
     func didSelectNote(at index: Int) {
-        
+        router.goToEditNote(id: notes[index].id)
     }
     
     func viewDidLoad() {
@@ -40,6 +46,7 @@ extension NotesListPresenter: NotesListPresenterProtocol {
 
 extension NotesListPresenter: NotesListInteractorOutputProtocol {
     func updateNotes(notes: [Note]) {
-        view?.updateView(notes: notes)
+        self.notes = notes.sorted(by: <)
+        view?.updateView(notes: self.notes)
     }    
 }

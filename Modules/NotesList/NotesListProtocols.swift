@@ -9,13 +9,15 @@ import Foundation
 
 //MARK: Wireframe -
 protocol NotesListWireframeProtocol: class {
-
+    func goToEditNote(id: String)
+    func gotToAddNote()
 }
+
 //MARK: Presenter -
-protocol NotesListPresenterProtocol: class {
-    
+protocol NotesListPresenterProtocol: class {  
     func viewDidLoad()
     func didSelectNote(at index: Int)
+    func didTouchAddNote()
 }
 
 //MARK: Interactor Input -

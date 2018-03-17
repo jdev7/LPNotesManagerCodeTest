@@ -49,6 +49,7 @@ class NotesListViewController: UIViewController {
     
     
     @IBAction func addNoteButtonTouched(_ sender: Any) {
+        presenter?.didTouchAddNote()
     }
     
 }
@@ -74,6 +75,11 @@ extension NotesListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.descriptionLabel.text = note.description
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectNote(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

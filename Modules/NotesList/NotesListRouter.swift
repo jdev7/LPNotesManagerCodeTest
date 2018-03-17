@@ -8,8 +8,13 @@
 import UIKit
 
 class NotesListRouter: NotesListWireframeProtocol {
-    
     weak var viewController: UIViewController?
     
+    func goToEditNote(id: String) {
+        print("Go to edit note")
+    }
     
+    func gotToAddNote() {
+        print("Go to add note")
+    }
 }
