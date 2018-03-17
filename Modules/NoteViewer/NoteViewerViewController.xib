@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteViewerViewController">
             <connections>
+                <outlet property="bottomConstraint" destination="Mih-SF-JeN" id="jvE-Ha-cJZ"/>
+                <outlet property="charCountLabel" destination="VHT-BY-Ik4" id="PFL-yZ-s8Q"/>
+                <outlet property="descriptionContainer" destination="JRT-Tz-JCF" id="pnE-MK-Cyt"/>
+                <outlet property="descriptionTextView" destination="toT-0s-k9W" id="sKC-Ov-4Hh"/>
+                <outlet property="titleTextField" destination="9ze-Ke-XpU" id="r9u-B4-jx3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +24,55 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vWy-ee-flp">
+                    <rect key="frame" x="15" y="35" width="345" height="30"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-Ke-XpU">
+                            <rect key="frame" x="0.0" y="0.0" width="290.5" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHT-BY-Ik4">
+                            <rect key="frame" x="305.5" y="0.0" width="39.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRT-Tz-JCF">
+                    <rect key="frame" x="15" y="80" width="345" height="572"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="toT-0s-k9W">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="572"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="toT-0s-k9W" firstAttribute="top" secondItem="JRT-Tz-JCF" secondAttribute="top" id="OcE-e7-O78"/>
+                        <constraint firstAttribute="trailing" secondItem="toT-0s-k9W" secondAttribute="trailing" id="pcz-p1-jw6"/>
+                        <constraint firstAttribute="bottom" secondItem="toT-0s-k9W" secondAttribute="bottom" id="qaA-4V-DwR"/>
+                        <constraint firstItem="toT-0s-k9W" firstAttribute="leading" secondItem="JRT-Tz-JCF" secondAttribute="leading" id="zno-zC-Otz"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JRT-Tz-JCF" firstAttribute="leading" secondItem="Dlf-eu-bUp" secondAttribute="leading" constant="15" id="Gng-H2-FFk"/>
+                <constraint firstItem="Dlf-eu-bUp" firstAttribute="trailing" secondItem="JRT-Tz-JCF" secondAttribute="trailing" constant="15" id="H1Z-Ay-c1h"/>
+                <constraint firstItem="Dlf-eu-bUp" firstAttribute="bottom" secondItem="JRT-Tz-JCF" secondAttribute="bottom" constant="15" id="Mih-SF-JeN"/>
+                <constraint firstItem="vWy-ee-flp" firstAttribute="top" secondItem="Dlf-eu-bUp" secondAttribute="top" constant="15" id="QwR-ep-djm"/>
+                <constraint firstItem="JRT-Tz-JCF" firstAttribute="top" secondItem="vWy-ee-flp" secondAttribute="bottom" constant="15" id="dN0-1q-ekK"/>
+                <constraint firstItem="vWy-ee-flp" firstAttribute="leading" secondItem="Dlf-eu-bUp" secondAttribute="leading" constant="15" id="j5S-5e-JuW"/>
+                <constraint firstItem="Dlf-eu-bUp" firstAttribute="trailing" secondItem="vWy-ee-flp" secondAttribute="trailing" constant="15" id="upv-nz-wxi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Dlf-eu-bUp"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
 </document>

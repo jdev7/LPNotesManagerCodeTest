@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol NotesListWireframeProtocol: class {
+protocol NotesListWireframeProtocol: CommonRouterProtocol {
     func goToEditNote(id: String)
     func goToAddNote()
 }
@@ -33,9 +33,4 @@ protocol NotesListInteractorOutputProtocol: class {
 //MARK: View -
 protocol NotesListViewProtocol: class {
     func updateView(notes: [PresentationNote])
-}
-
-//MARK: DataManager -
-protocol NotesDataManagerProtocol {
-    func getNotes() -> [Note]
 }

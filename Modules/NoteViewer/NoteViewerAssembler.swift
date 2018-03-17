@@ -12,7 +12,6 @@ class NotesViewerAssembler: ViewControllerAssembler<NoteViewerViewController> {
     
     override func registerDependencies() {
         container.register(NoteViewerRouter.self, factory: { _ in NoteViewerRouter(assembler: self.mainAssembler) })
-        container.register(NotesDataManager.self, factory: { _ in NotesDataManager() }).inObjectScope(.container)
         container.register(NoteViewerInteractor.self, factory: { (_, dataManager: NotesDataManager) in NoteViewerInteractor(dataManager: dataManager) })
         container.register(NoteViewerPresenter.self) { (_, view: NoteViewerViewController, interactor: NoteViewerInteractor, router: NoteViewerRouter) in
             return NoteViewerPresenter(view: view, interactor: interactor, router: router)

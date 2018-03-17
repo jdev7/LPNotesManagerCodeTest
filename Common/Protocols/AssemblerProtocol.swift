@@ -25,8 +25,8 @@ class ViewControllerAssembler<T: UIViewController>: AssemblerProtocol {
     let container: Container
     weak var mainAssembler: MainAssembler!
     
-    required init(mainAssembler: MainAssembler) {
-        container = Container()
+    required init(parentContainer: Container, mainAssembler: MainAssembler) {
+        self.container = Container(parent: parentContainer)
         self.mainAssembler = mainAssembler
         register()
         

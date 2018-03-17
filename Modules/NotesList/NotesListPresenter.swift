@@ -36,7 +36,8 @@ extension NotesListPresenter: NotesListPresenterProtocol {
     }
     
     func didSelectNote(at index: Int) {
-        router.goToEditNote(id: notes[index].id)
+        let note = notes[index]
+        router.goToEditNote(id: note.id)
     }
     
     func viewDidLoad() {
@@ -46,7 +47,7 @@ extension NotesListPresenter: NotesListPresenterProtocol {
 
 extension NotesListPresenter: NotesListInteractorOutputProtocol {
     func updateNotes(notes: [Note]) {
-        self.notes = notes.sorted(by: <)
+        self.notes = notes.sorted(by: >)
         view?.updateView(notes: self.notes)
     }    
 }

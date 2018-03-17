@@ -9,8 +9,12 @@
 import UIKit
 
 extension UIColor {
-    static var lpGreenColor: UIColor {
+    static var lpGreen: UIColor {
         return .rgbColor(red: 26, green: 188, blue: 156, alpha: 1)
+    }
+    
+    static var lpRed: UIColor {
+        return .rgbColor(red: 231, green: 76, blue: 60, alpha: 1)
     }
     
     private static func rgbColor(red: Float, green: Float, blue: Float, alpha: Float) -> UIColor {

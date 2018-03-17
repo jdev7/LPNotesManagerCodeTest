@@ -24,16 +24,30 @@ class NotesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         presenter?.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func setupViews() {
-        titleLabel.textColor = .lpGreenColor
-        addNoteButton.backgroundColor = .lpGreenColor
+        titleLabel.textColor = .lpGreen
+        addNoteButton.backgroundColor = .lpGreen
         addNoteButton.setTitleColor(.white, for: .normal)
         addNoteButton.setTitleColor(UIColor.lightGray, for: .selected)
         addNoteButton.layer.cornerRadius = 6.0
         addNoteButton.layer.masksToBounds = true
+        
+        navigationController?.navigationBar.barTintColor = .lpGreen
+        navigationController?.navigationBar.tintColor = .white
+        
         setupTableView()
     }
     
@@ -56,6 +70,7 @@ class NotesListViewController: UIViewController {
 
 
 extension NotesListViewController: NotesListViewProtocol {
+    
     func updateView(notes: [PresentationNote]) {
         self.notes = notes
         tableview.reloadData()
