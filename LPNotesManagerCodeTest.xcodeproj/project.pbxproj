@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Frameworks;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		099E8675205D213000D8CF98 /* Models */ = {
