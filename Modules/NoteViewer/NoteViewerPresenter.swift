@@ -83,6 +83,7 @@ extension NoteViewerPresenter: NoteViewerInteractorOutputProtocol {
     func noteFetched(note: Note) {
         self.note = note
         view?.loadNote(note: note)
+        setFeedback(for: note.description)
     }
     
     func noteDidFinishSaving() {

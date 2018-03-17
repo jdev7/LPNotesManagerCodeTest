@@ -91,7 +91,8 @@ extension NoteViewerViewController: NoteViewerViewProtocol {
     }
     
     func loadNote(note: PresentationNote) {
-        print("\ntitle: \(note.title)\ndescription: \(note.description)")
+        titleTextField.text = note.title
+        descriptionTextView.text = note.description
     }
 }
 

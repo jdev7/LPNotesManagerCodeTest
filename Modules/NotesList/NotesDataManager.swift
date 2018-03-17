@@ -16,7 +16,23 @@ class NotesDataManager: NotesDataManagerProtocol {
         return Array(notes)
     }
     
-    func save(note: Note) {
-        notes.update(with: note)
+    
+    func getNotes(completion: @escaping ([Note]) -> ()) {
+        DispatchQueue.global(qos: .default).async {
+            let notes = Array(self.notes)
+            DispatchQueue.main.async {
+                completion(notes)
+            }
+        }
     }
+    
+    func save(note: Note, completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .default).async {
+            self.notes.update(with: note)
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
 }

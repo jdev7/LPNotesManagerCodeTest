@@ -20,7 +20,8 @@ class NotesListInteractor {
 
 extension NotesListInteractor: NotesListInteractorInputProtocol {
     func getNotes() {
-        let notes = dataManager.getNotes()
-        output?.updateNotes(notes: notes)
+        dataManager.getNotes() { notes in
+            self.output?.updateNotes(notes: notes)
+        }
     }
 }

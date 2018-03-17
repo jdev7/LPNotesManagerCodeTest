@@ -37,6 +37,6 @@ protocol NotesListViewProtocol: class {
 
 //MARK: DataManager -
 protocol NotesDataManagerProtocol {
-    func getNotes() -> [Note]
-    func save(note: Note)
+    func getNotes(completion: @escaping (_ notes: [Note]) -> ())
+    func save(note: Note, completion: @escaping () -> ())
 }
