@@ -15,6 +15,7 @@ protocol NoteViewerWireframeProtocol: class {
 //MARK: Presenter -
 protocol NoteViewerPresenterProtocol: class {
     func viewDidLoad(noteId: String?)
+    func descriptionDidChange(text: String)
     func didTouchSaveNote(title: String, description: String)
 }
 
@@ -34,4 +35,5 @@ protocol NoteViewerInteractorOutputProtocol: class {
 //MARK: View -
 protocol NoteViewerViewProtocol: class {
     func loadNote(note: PresentationNote)
+    func set(feedbackType: CharactersCountFeedback)
 }

@@ -33,6 +33,7 @@
 		099E868D205D3F7500D8CF98 /* NoteViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8687205D3F7500D8CF98 /* NoteViewerViewController.swift */; };
 		099E868E205D3F7500D8CF98 /* NoteViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8688205D3F7500D8CF98 /* NoteViewerViewController.xib */; };
 		099E8690205D3F9300D8CF98 /* NoteViewerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E868F205D3F9300D8CF98 /* NoteViewerAssembler.swift */; };
+		099E8692205D905000D8CF98 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8691205D905000D8CF98 /* UIViewControllerExtension.swift */; };
 		09CE1C66205AFB2B0090656A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; };
 		09CE1C67205AFB2B0090656A /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6D205B00590090656A /* AssemblerProtocol.swift */; };
@@ -93,6 +94,7 @@
 		099E8687205D3F7500D8CF98 /* NoteViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerViewController.swift; sourceTree = "<group>"; };
 		099E8688205D3F7500D8CF98 /* NoteViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewerViewController.xib; sourceTree = "<group>"; };
 		099E868F205D3F9300D8CF98 /* NoteViewerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerAssembler.swift; sourceTree = "<group>"; };
+		099E8691205D905000D8CF98 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		09CE1C64205AFB230090656A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
 		09CE1C6D205B00590090656A /* AssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				099E8680205D377E00D8CF98 /* UIColor.swift */,
+				099E8691205D905000D8CF98 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */,
 				099E8690205D3F9300D8CF98 /* NoteViewerAssembler.swift in Sources */,
 				091BBE0B205B093E0046A2F4 /* NotesListAssembler.swift in Sources */,
+				099E8692205D905000D8CF98 /* UIViewControllerExtension.swift in Sources */,
 				091BBE06205B08E50046A2F4 /* NotesListProtocols.swift in Sources */,
 				099E8689205D3F7500D8CF98 /* NoteViewerInteractor.swift in Sources */,
 				099E868A205D3F7500D8CF98 /* NoteViewerPresenter.swift in Sources */,

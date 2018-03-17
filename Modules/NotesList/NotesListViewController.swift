@@ -38,8 +38,8 @@ class NotesListViewController: UIViewController {
     }
     
     func setupViews() {
-        titleLabel.textColor = .lpGreenColor
-        addNoteButton.backgroundColor = .lpGreenColor
+        titleLabel.textColor = .lpGreen
+        addNoteButton.backgroundColor = .lpGreen
         addNoteButton.setTitleColor(.white, for: .normal)
         addNoteButton.setTitleColor(UIColor.lightGray, for: .selected)
         addNoteButton.layer.cornerRadius = 6.0

@@ -7,7 +7,23 @@
 
 import Foundation
 
+enum CharactersCountFeedback {
+    case valid(String)
+    case invalid(String)
+    
+    var text: String {
+        switch self {
+        case .valid(let text):     return text
+        case .invalid(let text):   return text
+        }
+    }
+}
+
 class NoteViewerPresenter {
+    
+    struct Constants {
+        static let maxCharactersCount = 140
+    }
 
     var interactor: NoteViewerInteractorInputProtocol
     private weak var view: NoteViewerViewProtocol?
@@ -22,9 +38,14 @@ class NoteViewerPresenter {
     }
     
     func validateData(title: String, description: String) -> Bool {
-        return title.count > 0 && 0...140 ~= description.count
+        return title.count > 0 && 1...Constants.maxCharactersCount ~= description.count
     }
-
+    
+    func setFeedback(for text: String) {
+        let feedbackText = "\(text.count)/\(Constants.maxCharactersCount)"
+        let feedback: CharactersCountFeedback = text.count <= Constants.maxCharactersCount ? .valid(feedbackText) : .invalid(feedbackText)
+        view?.set(feedbackType: feedback)
+    }
 }
 
 extension NoteViewerPresenter: NoteViewerPresenterProtocol {
@@ -32,11 +53,17 @@ extension NoteViewerPresenter: NoteViewerPresenterProtocol {
         if let noteId = noteId {
             interactor.getNote(id: noteId)
         }
+        setFeedback(for: "")
+    }
+    
+    func descriptionDidChange(text: String) {
+        setFeedback(for: text)
     }
     
     func didTouchSaveNote(title: String, description: String) {
         guard validateData(title: title, description: description) else {
 //            view.showError()
+            print("error!")
             return
         }
         
@@ -51,8 +78,6 @@ extension NoteViewerPresenter: NoteViewerPresenterProtocol {
         }
         interactor.saveNote(note: noteToSave)
     }
-    
-    
 }
 
 extension NoteViewerPresenter: NoteViewerInteractorOutputProtocol {
@@ -62,8 +87,6 @@ extension NoteViewerPresenter: NoteViewerInteractorOutputProtocol {
     }
     
     func noteDidFinishSaving() {
-        
+        print("note saved")
     }
-    
-    
 }
