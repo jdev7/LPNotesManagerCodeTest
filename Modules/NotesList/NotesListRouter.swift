@@ -26,6 +26,7 @@ class NotesListRouter: NotesListWireframeProtocol {
     
     private func goToNoteViewer(id: String? = nil) {
         let vc: NoteViewerViewController = assembler.resolve()
+        vc.noteId = id
         viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -11,14 +11,21 @@ import UIKit
 class NoteViewerViewController: UIViewController {
 
 	var presenter: NoteViewerPresenterProtocol?
+    
+    var noteId: String?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad(noteId: noteId)
     }
 
 }
 
 
 extension NoteViewerViewController: NoteViewerViewProtocol {
+    func loadNote(note: PresentationNote) {
+        print("\ntitle: \(note.title)\ndescription: \(note.description)")
+    }
+    
     
 }

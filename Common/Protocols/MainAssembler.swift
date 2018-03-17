@@ -19,8 +19,11 @@ class MainAssembler {
     }
     
     func registerDependencies() {
-        container.register(ViewControllerAssembler<NotesListViewController>.self, factory: { _ in NotesListAssembler(mainAssembler: self) })
-        container.register(ViewControllerAssembler<NoteViewerViewController>.self, factory: { _ in NotesViewerAssembler(mainAssembler: self) })
+        container.register(ViewControllerAssembler<NotesListViewController>.self, factory: { _ in NotesListAssembler(parentContainer: self.container, mainAssembler: self) })
+        container.register(ViewControllerAssembler<NoteViewerViewController>.self, factory: { _ in NotesViewerAssembler(parentContainer: self.container, mainAssembler: self) })
+        
+        container.register(NotesDataManager.self, factory: { _ in NotesDataManager() }).inObjectScope(.container)
+        
     }
     
     func resolve<T: UIViewController>() -> T {

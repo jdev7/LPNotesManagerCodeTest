@@ -16,8 +16,24 @@ class NoteViewerInteractor {
     init(dataManager: NotesDataManagerProtocol) {
         self.dataManager = dataManager
     }
+    
+    private var notes: [Note] {
+        return dataManager.getNotes()
+    }
 }
 
 extension NoteViewerInteractor: NoteViewerInteractorInputProtocol {
+    func getNote(id: String) {
+        let note = notes.first { $0.id == id }
+        output?.noteFetched(note: note!)
+    }
+    
+    func saveNote(note: Note) {
+        var updatedNote = note
+        updatedNote.lastUpdated = Date()
+        dataManager.save(note: updatedNote)
+        output?.noteDidFinishSaving()
+    }
+    
     
 }

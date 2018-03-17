@@ -12,22 +12,29 @@ struct Note {
     var title: String
     var description: String
     var created: Date
+    var lastUpdated: Date
     var id: String
     
     init(title: String, description: String) {
         self.title = title
         self.description = description
         self.created = Date()
-        self.id = "\(created.timeIntervalSince1970)"
+        self.lastUpdated = created
+        self.id = "\(created.timeIntervalSince1970)\(arc4random_uniform(999))"
     }
 }
 
-extension Note: Comparable {
+extension Note: Comparable, Hashable {
     static func <(lhs: Note, rhs: Note) -> Bool {
-        return lhs.created < lhs.created
+        return lhs.lastUpdated < lhs.lastUpdated
     }
 
     static func ==(lhs: Note, rhs: Note) -> Bool {
         return lhs.id == rhs.id
     }
+
+    var hashValue: Int {
+        return id.hashValue
+    }
 }
+

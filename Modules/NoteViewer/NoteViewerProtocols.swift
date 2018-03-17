@@ -11,23 +11,27 @@ import Foundation
 protocol NoteViewerWireframeProtocol: class {
 
 }
+
 //MARK: Presenter -
 protocol NoteViewerPresenterProtocol: class {
-
+    func viewDidLoad(noteId: String?)
+    func didTouchSaveNote(title: String, description: String)
 }
 
 //MARK: Interactor Input -
 protocol NoteViewerInteractorInputProtocol: class {
-
+    func getNote(id: String)
+    func saveNote(note: Note)
 }
 
 //MARK: Interactor Output -
 protocol NoteViewerInteractorOutputProtocol: class {
-    
+    func noteFetched(note: Note)
+    func noteDidFinishSaving()
 }
 
 
 //MARK: View -
 protocol NoteViewerViewProtocol: class {
-
+    func loadNote(note: PresentationNote)
 }
