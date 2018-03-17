@@ -10,10 +10,17 @@ import Foundation
 class NotesListInteractor {
 
     weak var output: NotesListInteractorOutputProtocol?
+
+    private let dataManager: NotesDataManagerProtocol
+    
+    init(dataManager: NotesDataManagerProtocol) {
+        self.dataManager = dataManager
+    }
 }
 
 extension NotesListInteractor: NotesListInteractorInputProtocol {
-    func prepareData() {
-        output?.updateData()
-    }    
+    func getNotes() {
+        let notes = dataManager.getNotes()
+        output?.updateNotes(notes: notes)
+    }
 }

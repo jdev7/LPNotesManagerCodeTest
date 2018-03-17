@@ -23,12 +23,13 @@ class NotesListPresenter {
 
 extension NotesListPresenter: NotesListPresenterProtocol {
     func viewDidLoad() {
-        interactor.prepareData()
+        interactor.getNotes()
     }
 }
 
 extension NotesListPresenter: NotesListInteractorOutputProtocol {
-    func updateData() {
+    func updateNotes(notes: [Note]) {
+        print(notes)
         view?.setupView()
     }    
 }

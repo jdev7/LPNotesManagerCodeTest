@@ -18,16 +18,20 @@ protocol NotesListPresenterProtocol: class {
 
 //MARK: Interactor Input -
 protocol NotesListInteractorInputProtocol: class {
-    func prepareData()
+    func getNotes()
 }
 
 //MARK: Interactor Output -
 protocol NotesListInteractorOutputProtocol: class {
-    func updateData()
+    func updateNotes(notes: [Note])
 }
-
 
 //MARK: View -
 protocol NotesListViewProtocol: class {
     func setupView()
+}
+
+//MARK: DataManager -
+protocol NotesDataManagerProtocol {
+    func getNotes() -> [Note]
 }

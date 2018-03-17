@@ -12,7 +12,8 @@ class NotesListAssembler: ViewControllerAssembler<NotesListViewController> {
     
     override func registerDependencies() {
         container.register(NotesListRouter.self, factory: { _ in NotesListRouter() })
-        container.register(NotesListInteractor.self, factory: { _ in NotesListInteractor() })
+        container.register(NotesDataManager.self, factory: { _ in NotesDataManager() }).inObjectScope(.container)
+        container.register(NotesListInteractor.self, factory: { (_, dataManager: NotesDataManager) in NotesListInteractor(dataManager: dataManager) })
         container.register(NotesListPresenter.self) { (_, view: NotesListViewController, interactor: NotesListInteractor, router: NotesListRouter) in
             return NotesListPresenter(view: view, interactor: interactor, router: router)
         }
@@ -20,7 +21,8 @@ class NotesListAssembler: ViewControllerAssembler<NotesListViewController> {
     
     override func resolveDependencies(object viewController: NotesListViewController) {
         let router = container.resolve(NotesListRouter.self)
-        let interactor = container.resolve(NotesListInteractor.self)
+        let dataManager = container.resolve(NotesDataManager.self)
+        let interactor = container.resolve(NotesListInteractor.self, argument: dataManager!)
         let presenter = container.resolve(NotesListPresenter.self, arguments: viewController, interactor!, router!)
         
         viewController.presenter = presenter
