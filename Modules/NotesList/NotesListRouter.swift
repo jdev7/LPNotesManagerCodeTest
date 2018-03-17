@@ -17,10 +17,15 @@ class NotesListRouter: NotesListWireframeProtocol {
     }
     
     func goToEditNote(id: String) {
-        print("Go to edit note \(assembler)")
+        goToNoteViewer(id: id)
     }
     
-    func gotToAddNote() {
-        print("Go to add note \(assembler)")
+    func goToAddNote() {
+        goToNoteViewer()
+    }
+    
+    private func goToNoteViewer(id: String? = nil) {
+        let vc: NoteViewerViewController = assembler.resolve()
+        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

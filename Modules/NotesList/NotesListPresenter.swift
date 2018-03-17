@@ -32,7 +32,7 @@ class NotesListPresenter {
 
 extension NotesListPresenter: NotesListPresenterProtocol {
     func didTouchAddNote() {
-        router.gotToAddNote()
+        router.goToAddNote()
     }
     
     func didSelectNote(at index: Int) {

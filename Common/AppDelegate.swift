@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         assembler = MainAssembler()
         let vc: NotesListViewController = assembler.resolve()
-        window?.rootViewController = vc
+        window?.rootViewController = UINavigationController(rootViewController: vc)
         
         return true
     }

@@ -10,7 +10,7 @@ import Foundation
 //MARK: Wireframe -
 protocol NotesListWireframeProtocol: class {
     func goToEditNote(id: String)
-    func gotToAddNote()
+    func goToAddNote()
 }
 
 //MARK: Presenter -
