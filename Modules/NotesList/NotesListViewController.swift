@@ -27,6 +27,16 @@ class NotesListViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func setupViews() {
         titleLabel.textColor = .lpGreenColor
         addNoteButton.backgroundColor = .lpGreenColor
