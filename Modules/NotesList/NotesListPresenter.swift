@@ -7,6 +7,13 @@
 
 import Foundation
 
+protocol PresentationNote {
+    var title: String { get }
+    var description: String { get }
+}
+
+extension Note: PresentationNote {}
+
 class NotesListPresenter {
 
     var interactor: NotesListInteractorInputProtocol
@@ -22,6 +29,10 @@ class NotesListPresenter {
 }
 
 extension NotesListPresenter: NotesListPresenterProtocol {
+    func didSelectNote(at index: Int) {
+        
+    }
+    
     func viewDidLoad() {
         interactor.getNotes()
     }
@@ -29,7 +40,6 @@ extension NotesListPresenter: NotesListPresenterProtocol {
 
 extension NotesListPresenter: NotesListInteractorOutputProtocol {
     func updateNotes(notes: [Note]) {
-        print(notes)
-        view?.setupView()
+        view?.updateView(notes: notes)
     }    
 }

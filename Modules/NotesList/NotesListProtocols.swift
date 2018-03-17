@@ -13,7 +13,9 @@ protocol NotesListWireframeProtocol: class {
 }
 //MARK: Presenter -
 protocol NotesListPresenterProtocol: class {
+    
     func viewDidLoad()
+    func didSelectNote(at index: Int)
 }
 
 //MARK: Interactor Input -
@@ -28,7 +30,7 @@ protocol NotesListInteractorOutputProtocol: class {
 
 //MARK: View -
 protocol NotesListViewProtocol: class {
-    func setupView()
+    func updateView(notes: [PresentationNote])
 }
 
 //MARK: DataManager -

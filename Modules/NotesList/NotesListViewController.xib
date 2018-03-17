@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotesListViewController">
             <connections>
+                <outlet property="addNoteButton" destination="Yp2-TW-EJ1" id="iGu-xe-5g0"/>
+                <outlet property="tableview" destination="UIb-1z-i0G" id="9aI-gN-fFT"/>
+                <outlet property="titleLabel" destination="QDo-6Z-M9Z" id="X05-KK-W6W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +22,67 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIb-1z-i0G">
+                    <rect key="frame" x="0.0" y="87.5" width="375" height="501.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ih-QH-Gtd" userLabel="Footer">
+                    <rect key="frame" x="0.0" y="589" width="375" height="78"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yp2-TW-EJ1">
+                            <rect key="frame" x="15" y="20" width="345" height="38"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                            <state key="normal" title="Añadir nota"/>
+                            <connections>
+                                <action selector="addNoteButtonTouched:" destination="-1" eventType="touchUpInside" id="7EH-IY-pDC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Yp2-TW-EJ1" secondAttribute="trailing" constant="15" id="853-C8-vF1"/>
+                        <constraint firstItem="Yp2-TW-EJ1" firstAttribute="leading" secondItem="9Ih-QH-Gtd" secondAttribute="leading" constant="15" id="DWQ-zB-yMR"/>
+                        <constraint firstItem="Yp2-TW-EJ1" firstAttribute="top" secondItem="9Ih-QH-Gtd" secondAttribute="top" constant="20" id="M9o-Sm-SAS"/>
+                        <constraint firstAttribute="bottom" secondItem="Yp2-TW-EJ1" secondAttribute="bottom" constant="20" id="twS-es-TI1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xi-9W-zl1" userLabel="Header">
+                    <rect key="frame" x="0.0" y="20" width="375" height="67.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUS NOTAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDo-6Z-M9Z">
+                            <rect key="frame" x="15" y="20" width="345" height="27.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="QDo-6Z-M9Z" secondAttribute="bottom" constant="20" id="BwU-rz-ezP"/>
+                        <constraint firstItem="QDo-6Z-M9Z" firstAttribute="top" secondItem="6xi-9W-zl1" secondAttribute="top" constant="20" id="Q0b-Hl-Bif"/>
+                        <constraint firstAttribute="trailing" secondItem="QDo-6Z-M9Z" secondAttribute="trailing" constant="15" id="VlT-xz-lQL"/>
+                        <constraint firstItem="QDo-6Z-M9Z" firstAttribute="leading" secondItem="6xi-9W-zl1" secondAttribute="leading" constant="15" id="yB9-MT-glL"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Sju-pF-37h"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Ih-QH-Gtd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0fa-gQ-Dvx"/>
+                <constraint firstAttribute="trailing" secondItem="UIb-1z-i0G" secondAttribute="trailing" id="5oO-eE-KkP"/>
+                <constraint firstItem="UIb-1z-i0G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="831-mr-cSs"/>
+                <constraint firstAttribute="trailing" secondItem="6xi-9W-zl1" secondAttribute="trailing" id="9co-Uk-apO"/>
+                <constraint firstAttribute="trailing" secondItem="9Ih-QH-Gtd" secondAttribute="trailing" id="Snp-5V-5pD"/>
+                <constraint firstItem="UIb-1z-i0G" firstAttribute="top" secondItem="6xi-9W-zl1" secondAttribute="bottom" id="UVo-lj-kJm"/>
+                <constraint firstItem="9Ih-QH-Gtd" firstAttribute="bottom" secondItem="2KU-5e-q9B" secondAttribute="bottom" id="ZUR-F7-8N3"/>
+                <constraint firstItem="6xi-9W-zl1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="crJ-us-Eeg"/>
+                <constraint firstItem="9Ih-QH-Gtd" firstAttribute="top" secondItem="UIb-1z-i0G" secondAttribute="bottom" id="eCI-9W-50X"/>
+                <constraint firstItem="9Ih-QH-Gtd" firstAttribute="bottom" secondItem="2KU-5e-q9B" secondAttribute="bottom" id="efq-Ip-Ev6"/>
+                <constraint firstItem="6xi-9W-zl1" firstAttribute="top" secondItem="2KU-5e-q9B" secondAttribute="top" id="ka2-XJ-wzZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="2KU-5e-q9B"/>
+            <point key="canvasLocation" x="-39.5" y="310.5"/>
         </view>
     </objects>
 </document>
