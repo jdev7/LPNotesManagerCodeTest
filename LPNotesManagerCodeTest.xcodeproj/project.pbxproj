@@ -36,8 +36,6 @@
 		099E8692205D905000D8CF98 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8691205D905000D8CF98 /* UIViewControllerExtension.swift */; };
 		099E8694205D9F2100D8CF98 /* CommonRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8693205D9F2100D8CF98 /* CommonRouterProtocol.swift */; };
 		099E8697205DAE0600D8CF98 /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8696205DAE0600D8CF98 /* DataManagerProtocol.swift */; };
-		09CE1C66205AFB2B0090656A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; };
-		09CE1C67205AFB2B0090656A /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6D205B00590090656A /* AssemblerProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				09CE1C67205AFB2B0090656A /* Swinject.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,7 +96,6 @@
 		099E8691205D905000D8CF98 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		099E8693205D9F2100D8CF98 /* CommonRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonRouterProtocol.swift; sourceTree = "<group>"; };
 		099E8696205DAE0600D8CF98 /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
-		09CE1C64205AFB230090656A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
 		09CE1C6D205B00590090656A /* AssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CE1C66205AFB2B0090656A /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +181,6 @@
 		095534A12059A1E9004D24D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09CE1C64205AFB230090656A /* Swinject.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -278,6 +272,7 @@
 				0955347B20599E87004D24D3 /* Frameworks */,
 				0955347C20599E87004D24D3 /* Resources */,
 				09B2AEF9205AFABC006E3D0C /* Embed Frameworks */,
+				099E869A205DB4D200D8CF98 /* Copy Carthage Frameworks Script */,
 			);
 			buildRules = (
 			);
@@ -369,6 +364,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		099E869A205DB4D200D8CF98 /* Copy Carthage Frameworks Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+			);
+			name = "Copy Carthage Frameworks Script";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0955347A20599E87004D24D3 /* Sources */ = {
