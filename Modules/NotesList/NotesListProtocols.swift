@@ -34,9 +34,3 @@ protocol NotesListInteractorOutputProtocol: class {
 protocol NotesListViewProtocol: class {
     func updateView(notes: [PresentationNote])
 }
-
-//MARK: DataManager -
-protocol NotesDataManagerProtocol {
-    func getNotes(completion: @escaping (_ notes: [Note]) -> ())
-    func save(note: Note, completion: @escaping () -> ())
-}
