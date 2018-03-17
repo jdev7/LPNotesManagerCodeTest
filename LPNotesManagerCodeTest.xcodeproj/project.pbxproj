@@ -7,16 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091BBDFB205B08520046A2F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091BBDFA205B08520046A2F4 /* Default-568h@2x.png */; };
+		091BBE04205B08E50046A2F4 /* NotesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBDFE205B08E50046A2F4 /* NotesListInteractor.swift */; };
+		091BBE05205B08E50046A2F4 /* NotesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBDFF205B08E50046A2F4 /* NotesListPresenter.swift */; };
+		091BBE06205B08E50046A2F4 /* NotesListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE00205B08E50046A2F4 /* NotesListProtocols.swift */; };
+		091BBE07205B08E50046A2F4 /* NotesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE01205B08E50046A2F4 /* NotesListRouter.swift */; };
+		091BBE08205B08E50046A2F4 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE02205B08E50046A2F4 /* NotesListViewController.swift */; };
+		091BBE09205B08E50046A2F4 /* NotesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091BBE03205B08E50046A2F4 /* NotesListViewController.xib */; };
+		091BBE0B205B093E0046A2F4 /* NotesListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */; };
+		091BBE0D205BB3D70046A2F4 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091BBE0C205BB3D70046A2F4 /* MainAssembler.swift */; };
 		0955348220599E87004D24D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348120599E87004D24D3 /* AppDelegate.swift */; };
-		0955348420599E87004D24D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955348320599E87004D24D3 /* ViewController.swift */; };
 		0955348720599E87004D24D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348520599E87004D24D3 /* Main.storyboard */; };
 		0955348920599E87004D24D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0955348820599E87004D24D3 /* Assets.xcassets */; };
 		0955348C20599E87004D24D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348A20599E87004D24D3 /* LaunchScreen.storyboard */; };
 		0955349720599E87004D24D3 /* LPNotesManagerCodeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */; };
-		095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */; };
+		099E8678205D215500D8CF98 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8677205D215500D8CF98 /* Note.swift */; };
+		099E867A205D240000D8CF98 /* NotesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8679205D240000D8CF98 /* NotesDataManager.swift */; };
+		099E867E205D2B9500D8CF98 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E867C205D2B9500D8CF98 /* NoteCell.swift */; };
+		099E867F205D2B9500D8CF98 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E867D205D2B9500D8CF98 /* NoteCell.xib */; };
+		099E8681205D377E00D8CF98 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8680205D377E00D8CF98 /* UIColor.swift */; };
+		099E8689205D3F7500D8CF98 /* NoteViewerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8683205D3F7500D8CF98 /* NoteViewerInteractor.swift */; };
+		099E868A205D3F7500D8CF98 /* NoteViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8684205D3F7500D8CF98 /* NoteViewerPresenter.swift */; };
+		099E868B205D3F7500D8CF98 /* NoteViewerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8685205D3F7500D8CF98 /* NoteViewerProtocols.swift */; };
+		099E868C205D3F7500D8CF98 /* NoteViewerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8686205D3F7500D8CF98 /* NoteViewerRouter.swift */; };
+		099E868D205D3F7500D8CF98 /* NoteViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8687205D3F7500D8CF98 /* NoteViewerViewController.swift */; };
+		099E868E205D3F7500D8CF98 /* NoteViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099E8688205D3F7500D8CF98 /* NoteViewerViewController.xib */; };
+		099E8690205D3F9300D8CF98 /* NoteViewerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E868F205D3F9300D8CF98 /* NoteViewerAssembler.swift */; };
 		09CE1C66205AFB2B0090656A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; };
 		09CE1C67205AFB2B0090656A /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09CE1C64205AFB230090656A /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		09CE1C6B205AFE360090656A /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */; };
 		09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1C6D205B00590090656A /* AssemblerProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +63,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		091BBDFA205B08520046A2F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		091BBDFE205B08E50046A2F4 /* NotesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListInteractor.swift; sourceTree = "<group>"; };
+		091BBDFF205B08E50046A2F4 /* NotesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListPresenter.swift; sourceTree = "<group>"; };
+		091BBE00205B08E50046A2F4 /* NotesListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListProtocols.swift; sourceTree = "<group>"; };
+		091BBE01205B08E50046A2F4 /* NotesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListRouter.swift; sourceTree = "<group>"; };
+		091BBE02205B08E50046A2F4 /* NotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
+		091BBE03205B08E50046A2F4 /* NotesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesListViewController.xib; sourceTree = "<group>"; };
+		091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListAssembler.swift; sourceTree = "<group>"; };
+		091BBE0C205BB3D70046A2F4 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		0955347E20599E87004D24D3 /* LPNotesManagerCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPNotesManagerCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955348120599E87004D24D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0955348320599E87004D24D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0955348620599E87004D24D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0955348820599E87004D24D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0955348B20599E87004D24D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,9 +81,19 @@
 		0955349220599E87004D24D3 /* LPNotesManagerCodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPNotesManagerCodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPNotesManagerCodeTestTests.swift; sourceTree = "<group>"; };
 		0955349820599E87004D24D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembler.swift; sourceTree = "<group>"; };
+		099E8677205D215500D8CF98 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		099E8679205D240000D8CF98 /* NotesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataManager.swift; sourceTree = "<group>"; };
+		099E867C205D2B9500D8CF98 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		099E867D205D2B9500D8CF98 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
+		099E8680205D377E00D8CF98 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		099E8683205D3F7500D8CF98 /* NoteViewerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerInteractor.swift; sourceTree = "<group>"; };
+		099E8684205D3F7500D8CF98 /* NoteViewerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerPresenter.swift; sourceTree = "<group>"; };
+		099E8685205D3F7500D8CF98 /* NoteViewerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerProtocols.swift; sourceTree = "<group>"; };
+		099E8686205D3F7500D8CF98 /* NoteViewerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerRouter.swift; sourceTree = "<group>"; };
+		099E8687205D3F7500D8CF98 /* NoteViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerViewController.swift; sourceTree = "<group>"; };
+		099E8688205D3F7500D8CF98 /* NoteViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewerViewController.xib; sourceTree = "<group>"; };
+		099E868F205D3F9300D8CF98 /* NoteViewerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewerAssembler.swift; sourceTree = "<group>"; };
 		09CE1C64205AFB230090656A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swinject.framework; sourceTree = "<group>"; };
-		09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		09CE1C6D205B00590090656A /* AssemblerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,9 +116,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091BBDFC205B08CD0046A2F4 /* NotesList */ = {
+			isa = PBXGroup;
+			children = (
+				099E867B205D2B3D00D8CF98 /* Views */,
+				091BBE0A205B093E0046A2F4 /* NotesListAssembler.swift */,
+				091BBDFE205B08E50046A2F4 /* NotesListInteractor.swift */,
+				091BBDFF205B08E50046A2F4 /* NotesListPresenter.swift */,
+				091BBE00205B08E50046A2F4 /* NotesListProtocols.swift */,
+				091BBE01205B08E50046A2F4 /* NotesListRouter.swift */,
+				091BBE02205B08E50046A2F4 /* NotesListViewController.swift */,
+				091BBE03205B08E50046A2F4 /* NotesListViewController.xib */,
+				099E8679205D240000D8CF98 /* NotesDataManager.swift */,
+			);
+			path = NotesList;
+			sourceTree = "<group>";
+		};
 		0955347520599E87004D24D3 = {
 			isa = PBXGroup;
 			children = (
+				099E8675205D213000D8CF98 /* Models */,
 				09CE1C68205AFCD20090656A /* Modules */,
 				0955348020599E87004D24D3 /* Common */,
 				0955349520599E87004D24D3 /* Tests */,
@@ -110,6 +163,7 @@
 				0955348820599E87004D24D3 /* Assets.xcassets */,
 				0955348A20599E87004D24D3 /* LaunchScreen.storyboard */,
 				0955348D20599E87004D24D3 /* Info.plist */,
+				091BBDFA205B08520046A2F4 /* Default-568h@2x.png */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -131,11 +185,50 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		099E8675205D213000D8CF98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				099E8676205D213F00D8CF98 /* Domain */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		099E8676205D213F00D8CF98 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				099E8677205D215500D8CF98 /* Note.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		099E867B205D2B3D00D8CF98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				099E867C205D2B9500D8CF98 /* NoteCell.swift */,
+				099E867D205D2B9500D8CF98 /* NoteCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		099E8682205D3F0300D8CF98 /* NoteViewer */ = {
+			isa = PBXGroup;
+			children = (
+				099E868F205D3F9300D8CF98 /* NoteViewerAssembler.swift */,
+				099E8683205D3F7500D8CF98 /* NoteViewerInteractor.swift */,
+				099E8684205D3F7500D8CF98 /* NoteViewerPresenter.swift */,
+				099E8685205D3F7500D8CF98 /* NoteViewerProtocols.swift */,
+				099E8686205D3F7500D8CF98 /* NoteViewerRouter.swift */,
+				099E8687205D3F7500D8CF98 /* NoteViewerViewController.swift */,
+				099E8688205D3F7500D8CF98 /* NoteViewerViewController.xib */,
+			);
+			path = NoteViewer;
+			sourceTree = "<group>";
+		};
 		09CE1C68205AFCD20090656A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				095534A62059A3C6004D24D3 /* ViewControllerAssembler.swift */,
-				0955348320599E87004D24D3 /* ViewController.swift */,
+				091BBDFC205B08CD0046A2F4 /* NotesList */,
+				099E8682205D3F0300D8CF98 /* NoteViewer */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -143,7 +236,7 @@
 		09CE1C69205AFE1A0090656A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				09CE1C6A205AFE360090656A /* UIStoryboardExtension.swift */,
+				099E8680205D377E00D8CF98 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				09CE1C6D205B00590090656A /* AssemblerProtocol.swift */,
+				091BBE0C205BB3D70046A2F4 /* MainAssembler.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -241,8 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0955348C20599E87004D24D3 /* LaunchScreen.storyboard in Resources */,
+				099E868E205D3F7500D8CF98 /* NoteViewerViewController.xib in Resources */,
+				091BBDFB205B08520046A2F4 /* Default-568h@2x.png in Resources */,
 				0955348920599E87004D24D3 /* Assets.xcassets in Resources */,
 				0955348720599E87004D24D3 /* Main.storyboard in Resources */,
+				091BBE09205B08E50046A2F4 /* NotesListViewController.xib in Resources */,
+				099E867F205D2B9500D8CF98 /* NoteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +358,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0955348420599E87004D24D3 /* ViewController.swift in Sources */,
-				095534A72059A3C6004D24D3 /* ViewControllerAssembler.swift in Sources */,
+				091BBE0D205BB3D70046A2F4 /* MainAssembler.swift in Sources */,
+				099E868C205D3F7500D8CF98 /* NoteViewerRouter.swift in Sources */,
+				099E868B205D3F7500D8CF98 /* NoteViewerProtocols.swift in Sources */,
+				091BBE08205B08E50046A2F4 /* NotesListViewController.swift in Sources */,
+				099E8681205D377E00D8CF98 /* UIColor.swift in Sources */,
+				091BBE07205B08E50046A2F4 /* NotesListRouter.swift in Sources */,
+				099E867E205D2B9500D8CF98 /* NoteCell.swift in Sources */,
+				091BBE05205B08E50046A2F4 /* NotesListPresenter.swift in Sources */,
+				091BBE04205B08E50046A2F4 /* NotesListInteractor.swift in Sources */,
 				09CE1C6E205B00590090656A /* AssemblerProtocol.swift in Sources */,
-				09CE1C6B205AFE360090656A /* UIStoryboardExtension.swift in Sources */,
+				099E8690205D3F9300D8CF98 /* NoteViewerAssembler.swift in Sources */,
+				091BBE0B205B093E0046A2F4 /* NotesListAssembler.swift in Sources */,
+				091BBE06205B08E50046A2F4 /* NotesListProtocols.swift in Sources */,
+				099E8689205D3F7500D8CF98 /* NoteViewerInteractor.swift in Sources */,
+				099E868A205D3F7500D8CF98 /* NoteViewerPresenter.swift in Sources */,
 				0955348220599E87004D24D3 /* AppDelegate.swift in Sources */,
+				099E8678205D215500D8CF98 /* Note.swift in Sources */,
+				099E868D205D3F7500D8CF98 /* NoteViewerViewController.swift in Sources */,
+				099E867A205D240000D8CF98 /* NotesDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +536,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = LPNotesManagerCodeTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.perhapps.LPNotesManagerCodeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +556,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = LPNotesManagerCodeTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.perhapps.LPNotesManagerCodeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

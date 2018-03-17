@@ -10,39 +10,40 @@ import UIKit
 import Swinject
 
 protocol AssemblerProtocol {
-    associatedtype ViewControllerType: UIViewController
+    associatedtype AssembledType
     
     var container: Container { get }
     func registerDependencies()
-    func resolve() -> ViewControllerType
-    func resolveDependencies(viewController: ViewControllerType)
+    func resolve() -> AssembledType
+    func resolveDependencies(object: AssembledType)
 }
 
-class BaseAssembler<T: UIViewController>: AssemblerProtocol {
+class ViewControllerAssembler<T: UIViewController>: AssemblerProtocol {
     
-    typealias ViewControllerType = T
+    typealias AssembledType = T
     
     let container: Container
+    weak var mainAssembler: MainAssembler!
     
-    required init() {
+    required init(mainAssembler: MainAssembler) {
         container = Container()
-        registerAllDependencies()
+        self.mainAssembler = mainAssembler
+        register()
+        
     }
     
     final func resolve() -> T {
         return container.resolve(T.self)!
     }
     
-    func resolveDependencies(viewController: T) {}
+    func resolveDependencies(object: T) {}
     func registerDependencies() {}
-    
-    private func registerAllDependencies() {
-        container.register(T.self, factory: { _ in
-            let controller: T = UIStoryboard.instantiateViewController()
-            self.resolveDependencies(viewController: controller)
+    func register() {
+        container.register(AssembledType.self, factory: { _ in
+            let controller: AssembledType = AssembledType(nibName: String(describing: AssembledType.self), bundle: nil)
+            self.resolveDependencies(object: controller)
             return controller
         })
         registerDependencies()
     }
-    
 }
