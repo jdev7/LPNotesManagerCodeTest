@@ -18,12 +18,41 @@ class NoteViewerViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionContainer: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         presenter?.viewDidLoad(noteId: noteId)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: view.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: view.window)
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
+        let frame = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? CGRect
+        bottomConstraint.constant = (frame?.height ?? 250) + 15
+        UIView.animate(withDuration: duration?.doubleValue ?? 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
+        bottomConstraint.constant = 15
+        UIView.animate(withDuration: duration?.doubleValue ?? 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     func setupView() {
@@ -39,6 +68,7 @@ class NoteViewerViewController: UIViewController {
     }
     
     @objc func didTouchSaveButton() {
+        view.endEditing(true)
         presenter?.didTouchSaveNote(title: titleTextField.text ?? "", description: descriptionTextView.text)
     }
 

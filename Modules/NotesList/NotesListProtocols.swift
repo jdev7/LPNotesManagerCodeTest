@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol NotesListWireframeProtocol: class {
+protocol NotesListWireframeProtocol: CommonRouterProtocol {
     func goToEditNote(id: String)
     func goToAddNote()
 }

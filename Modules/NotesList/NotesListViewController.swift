@@ -66,6 +66,7 @@ class NotesListViewController: UIViewController {
 
 
 extension NotesListViewController: NotesListViewProtocol {
+    
     func updateView(notes: [PresentationNote]) {
         self.notes = notes
         tableview.reloadData()

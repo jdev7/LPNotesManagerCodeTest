@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteViewerViewController">
             <connections>
+                <outlet property="bottomConstraint" destination="Mih-SF-JeN" id="jvE-Ha-cJZ"/>
                 <outlet property="charCountLabel" destination="VHT-BY-Ik4" id="PFL-yZ-s8Q"/>
                 <outlet property="descriptionContainer" destination="JRT-Tz-JCF" id="pnE-MK-Cyt"/>
                 <outlet property="descriptionTextView" destination="toT-0s-k9W" id="sKC-Ov-4Hh"/>

@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol NoteViewerWireframeProtocol: class {
+protocol NoteViewerWireframeProtocol: CommonRouterProtocol {
 
 }
 

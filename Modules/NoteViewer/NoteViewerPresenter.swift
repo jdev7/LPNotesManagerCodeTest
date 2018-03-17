@@ -62,8 +62,7 @@ extension NoteViewerPresenter: NoteViewerPresenterProtocol {
     
     func didTouchSaveNote(title: String, description: String) {
         guard validateData(title: title, description: description) else {
-//            view.showError()
-            print("error!")
+            router.showOkAlert(title: "Error", message: "Title and description (max 140 char) should not be empty")
             return
         }
         
@@ -87,6 +86,6 @@ extension NoteViewerPresenter: NoteViewerInteractorOutputProtocol {
     }
     
     func noteDidFinishSaving() {
-        print("note saved")
+        router.goBack()
     }
 }
