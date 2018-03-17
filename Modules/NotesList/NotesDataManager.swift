@@ -10,10 +10,26 @@ import Foundation
 
 class NotesDataManager: NotesDataManagerProtocol {
     
-    private var notes: Set<Note> = [Note(title: "titulo 1", description: "una descripción"), Note(title: "titulo 2", description: "otra descripción cualquiera, que es mucho más larga y debería no caber en 2 líneas para ver la elipsis, y ver que funciona correctamente")]
+    private var _notes: Set<Note> = [Note(title: "titulo 1", description: "una descripción de ejemplo"), Note(title: "titulo 2", description: "otra descripción de ejemplo, pero bastante más larga para que no quepa en 2 líneas; así podré ver que el truncado funciona correctamente")]
     
-    func getNotes() -> [Note] {
-        return Array(notes)
+    private let synchronizationQueue: DispatchQueue = {
+        let name = String(format: "net.perhapps.lpNotesManagerCodeTest-%08x%08x", arc4random(), arc4random())
+        return DispatchQueue(label: name)
+    }()
+    
+    private var notes: Set<Note> {
+        set {
+            synchronizationQueue.sync {
+                _notes = newValue
+            }
+        }
+        get {
+            var result: Set<Note>?
+            synchronizationQueue.sync {
+                result = _notes
+            }
+            return result!
+        }
     }
     
     
