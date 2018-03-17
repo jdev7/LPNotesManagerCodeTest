@@ -17,6 +17,6 @@ class NotesDataManager: NotesDataManagerProtocol {
     }
     
     func save(note: Note) {
-        notes.insert(note)
+        notes.update(with: note)
     }
 }

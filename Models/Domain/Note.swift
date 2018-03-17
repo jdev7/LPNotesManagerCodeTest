@@ -26,7 +26,7 @@ struct Note {
 
 extension Note: Comparable, Hashable {
     static func <(lhs: Note, rhs: Note) -> Bool {
-        return lhs.lastUpdated < lhs.lastUpdated
+        return lhs.lastUpdated < rhs.lastUpdated
     }
 
     static func ==(lhs: Note, rhs: Note) -> Bool {

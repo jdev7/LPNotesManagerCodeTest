@@ -24,12 +24,12 @@ class NotesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        presenter?.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+        presenter?.viewDidLoad()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -47,7 +47,7 @@ extension NotesListPresenter: NotesListPresenterProtocol {
 
 extension NotesListPresenter: NotesListInteractorOutputProtocol {
     func updateNotes(notes: [Note]) {
-        self.notes = notes.sorted(by: <)
+        self.notes = notes.sorted(by: >)
         view?.updateView(notes: self.notes)
     }    
 }

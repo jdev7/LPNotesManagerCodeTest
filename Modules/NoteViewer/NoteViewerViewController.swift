@@ -16,7 +16,13 @@ class NoteViewerViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTouchSaveButton))
+        navigationItem.setRightBarButton(saveButton, animated: true)
         presenter?.viewDidLoad(noteId: noteId)
+    }
+    
+    @objc func didTouchSaveButton() {
+        presenter?.didTouchSaveNote(title: "prueba\(arc4random_uniform(999))", description: "descripción!!")
     }
 
 }
