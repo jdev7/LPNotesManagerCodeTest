@@ -25,6 +25,10 @@ class NotesDataManagerTests: XCTestCase {
         super.tearDown()
     }
     
+    func testDataManagerInitShouldHaveTwoDemoNotes() {
+        XCTAssertEqual(sut.notes.count, 2)
+    }
+    
     func testGetNotesReturnNotesVar() {
         let notes = [utils.note1, utils.note2]
         sut.notes = Set(notes)
