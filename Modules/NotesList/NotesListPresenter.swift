@@ -20,7 +20,7 @@ class NotesListPresenter {
     private weak var view: NotesListViewProtocol?
     private let router: NotesListWireframeProtocol
     
-    private var notes: [Note] = []
+    var notes: [Note] = []
 
     init(view: NotesListViewProtocol, interactor: NotesListInteractorInputProtocol, router: NotesListWireframeProtocol) {
         self.view = view

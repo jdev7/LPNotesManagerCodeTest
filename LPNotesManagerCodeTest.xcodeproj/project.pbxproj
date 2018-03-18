@@ -20,7 +20,8 @@
 		0955348720599E87004D24D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348520599E87004D24D3 /* Main.storyboard */; };
 		0955348920599E87004D24D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0955348820599E87004D24D3 /* Assets.xcassets */; };
 		0955348C20599E87004D24D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348A20599E87004D24D3 /* LaunchScreen.storyboard */; };
-		0955349720599E87004D24D3 /* LPNotesManagerCodeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */; };
+		0955349720599E87004D24D3 /* NotesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955349620599E87004D24D3 /* NotesListInteractorTests.swift */; };
+		097F9497205DEEAC00AF2924 /* NotesListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F9496205DEEAC00AF2924 /* NotesListPresenterTest.swift */; };
 		099E8678205D215500D8CF98 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8677205D215500D8CF98 /* Note.swift */; };
 		099E867A205D240000D8CF98 /* NotesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8679205D240000D8CF98 /* NotesDataManager.swift */; };
 		099E867E205D2B9500D8CF98 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E867C205D2B9500D8CF98 /* NoteCell.swift */; };
@@ -79,8 +80,9 @@
 		0955348B20599E87004D24D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0955348D20599E87004D24D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0955349220599E87004D24D3 /* LPNotesManagerCodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPNotesManagerCodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPNotesManagerCodeTestTests.swift; sourceTree = "<group>"; };
+		0955349620599E87004D24D3 /* NotesListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListInteractorTests.swift; sourceTree = "<group>"; };
 		0955349820599E87004D24D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097F9496205DEEAC00AF2924 /* NotesListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListPresenterTest.swift; sourceTree = "<group>"; };
 		099E8677205D215500D8CF98 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		099E8679205D240000D8CF98 /* NotesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataManager.swift; sourceTree = "<group>"; };
 		099E867C205D2B9500D8CF98 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
@@ -172,7 +174,8 @@
 		0955349520599E87004D24D3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0955349620599E87004D24D3 /* LPNotesManagerCodeTestTests.swift */,
+				0955349620599E87004D24D3 /* NotesListInteractorTests.swift */,
+				097F9496205DEEAC00AF2924 /* NotesListPresenterTest.swift */,
 				0955349820599E87004D24D3 /* Info.plist */,
 			);
 			path = Tests;
@@ -418,7 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0955349720599E87004D24D3 /* LPNotesManagerCodeTestTests.swift in Sources */,
+				097F9497205DEEAC00AF2924 /* NotesListPresenterTest.swift in Sources */,
+				0955349720599E87004D24D3 /* NotesListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +608,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46H26683TG;
-				INFOPLIST_FILE = LPNotesManagerCodeTestTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.perhapps.LPNotesManagerCodeTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -621,7 +625,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46H26683TG;
-				INFOPLIST_FILE = LPNotesManagerCodeTestTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.perhapps.LPNotesManagerCodeTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
