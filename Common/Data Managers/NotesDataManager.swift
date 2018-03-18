@@ -17,7 +17,7 @@ class NotesDataManager: NotesDataManagerProtocol {
         return DispatchQueue(label: name)
     }()
     
-    private var notes: Set<Note> {
+    var notes: Set<Note> {
         set {
             synchronizationQueue.sync {
                 _notes = newValue

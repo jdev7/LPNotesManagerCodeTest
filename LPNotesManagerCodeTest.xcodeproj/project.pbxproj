@@ -22,6 +22,8 @@
 		0955348C20599E87004D24D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0955348A20599E87004D24D3 /* LaunchScreen.storyboard */; };
 		0955349720599E87004D24D3 /* NotesListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955349620599E87004D24D3 /* NotesListInteractorTests.swift */; };
 		097F9497205DEEAC00AF2924 /* NotesListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F9496205DEEAC00AF2924 /* NotesListPresenterTest.swift */; };
+		097F9499205E766800AF2924 /* NotesDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F9498205E766800AF2924 /* NotesDataManagerTests.swift */; };
+		097F949B205E772B00AF2924 /* UnitTestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F949A205E772B00AF2924 /* UnitTestUtils.swift */; };
 		099E8678205D215500D8CF98 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8677205D215500D8CF98 /* Note.swift */; };
 		099E867A205D240000D8CF98 /* NotesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E8679205D240000D8CF98 /* NotesDataManager.swift */; };
 		099E867E205D2B9500D8CF98 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E867C205D2B9500D8CF98 /* NoteCell.swift */; };
@@ -83,6 +85,8 @@
 		0955349620599E87004D24D3 /* NotesListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListInteractorTests.swift; sourceTree = "<group>"; };
 		0955349820599E87004D24D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		097F9496205DEEAC00AF2924 /* NotesListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListPresenterTest.swift; sourceTree = "<group>"; };
+		097F9498205E766800AF2924 /* NotesDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataManagerTests.swift; sourceTree = "<group>"; };
+		097F949A205E772B00AF2924 /* UnitTestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestUtils.swift; sourceTree = "<group>"; };
 		099E8677205D215500D8CF98 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		099E8679205D240000D8CF98 /* NotesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataManager.swift; sourceTree = "<group>"; };
 		099E867C205D2B9500D8CF98 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
@@ -175,8 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				0955349620599E87004D24D3 /* NotesListInteractorTests.swift */,
+				097F9498205E766800AF2924 /* NotesDataManagerTests.swift */,
 				097F9496205DEEAC00AF2924 /* NotesListPresenterTest.swift */,
 				0955349820599E87004D24D3 /* Info.plist */,
+				097F949A205E772B00AF2924 /* UnitTestUtils.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -422,7 +428,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				097F9497205DEEAC00AF2924 /* NotesListPresenterTest.swift in Sources */,
+				097F949B205E772B00AF2924 /* UnitTestUtils.swift in Sources */,
 				0955349720599E87004D24D3 /* NotesListInteractorTests.swift in Sources */,
+				097F9499205E766800AF2924 /* NotesDataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

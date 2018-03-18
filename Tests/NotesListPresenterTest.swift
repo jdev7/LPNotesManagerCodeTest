@@ -22,8 +22,9 @@ class NotesListPresenterTest: XCTestCase {
         interactor = NotesListInteractorInputMock()
         router = NotesListRouterMock()
         sut = NotesListPresenter(view: view, interactor: interactor, router: router)
-        note1 = Note(title: "titulo1", description: "description1")
-        note2 = Note(title: "titulo2", description: "description2")
+        let utils = UnitTestUtils()
+        note1 = utils.note1
+        note2 = utils.note2
     }
     
     override func tearDown() {
