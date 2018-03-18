@@ -12,4 +12,9 @@ import Foundation
 class UnitTestUtils {
     var note1 = Note(title: "titulo1", description: "description1")
     var note2 = Note(title: "titulo2", description: "description2")
+    
+    static func generateText(lenght: Int) -> String {
+        let array: [String] = (0..<lenght).map { _ in "a" }
+        return array.joined()
+    }
 }

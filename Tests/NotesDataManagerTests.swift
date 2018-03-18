@@ -30,12 +30,12 @@ class NotesDataManagerTests: XCTestCase {
     }
     
     func testGetNotesReturnNotesVar() {
-        let notes = [utils.note1, utils.note2]
+        let notes = [utils.note1, utils.note2].sorted(by: <)
         sut.notes = Set(notes)
         
         let expectation = XCTestExpectation(description: "notesExpectation")
         sut.getNotes { (notesFetched) in
-            XCTAssertEqual(notesFetched, notes)
+            XCTAssertEqual(notesFetched.sorted(by: <), notes)
             expectation.fulfill()
         }
         XCTAssertEqual(XCTWaiter.wait(for: [expectation], timeout: 0.3), .completed)
