@@ -50,18 +50,5 @@ class NotesListInteractorTests: XCTestCase {
             updateNotes = notes
             updateNotesWasCalled = true
         }
-    }
-    
-    class NotesDataManagerMock: NotesDataManagerProtocol {
-        var notes: [Note]!
-        var getNotesWasCalled: Bool = false
-        
-        func getNotes(completion: @escaping ([Note]) -> ()) {
-            getNotesWasCalled = true
-            completion(notes)
-        }
-        
-        func save(note: Note, completion: @escaping () -> ()) {}
-    }
-    
+    }    
 }

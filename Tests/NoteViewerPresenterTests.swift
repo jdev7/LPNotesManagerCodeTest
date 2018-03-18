@@ -1,5 +1,5 @@
 //
-//  NotesViewerPresenterTests.swift
+//  NoteViewerPresenterTests.swift
 //  LPNotesManagerCodeTestTests
 //
 //  Created by Juan Navas Martin on 18/3/18.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import LPNotesManagerCodeTest
 
-class NotesViewerPresenterTests: XCTestCase {
+class NoteViewerPresenterTests: XCTestCase {
     
     var sut: NoteViewerPresenterProtocol!
     var sut2: NoteViewerInteractorOutputProtocol!
